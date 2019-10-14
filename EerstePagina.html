@@ -1,2 +1,47 @@
-<h1>eerste titel </h1>
-<h2>tweede titel </h2>
+<script>
+//javascript
+//casesensitive
+	function mijnFunctie(){
+		alert("computer says no");
+		document.getElementById("eenID").innerHTML = "JoJo";
+		var getal = document.getElementById("eerstgetal")
+		//document.getElementById("eenID").innerHTML = getal;
+	}
+
+</script>
+
+<style>
+//regels van css gelden hier
+//selector{body}
+
+	h1{
+		background-color:red;
+	}
+	h1#eenID{
+		background-color:green;
+	}
+	
+</Style>
+
+<h1 align= "left" style="background-color:orange"> 
+		eerste titel 
+</h1>
+
+<h1 align= "center"	onclick="mijnFunctie()"> 
+		Eerste titel 2: electric boogaloo
+</h1>
+
+<h1 align="right" id="eenID">
+		Eerste titel 3: its free
+</h1>
+
+<h2 style="text-decoration:red"> 
+		tweede titel 
+</h2>
+
+<input type=text id=eerstegetal>
+
+<textarea cols="400" rows="300" rows="2" style="color=:yellow"> 
+	let's a go 
+	
+</textarea>
