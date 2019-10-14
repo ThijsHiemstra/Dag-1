@@ -1,0 +1,58 @@
+<script>
+
+
+</script>
+
+<html>
+    <head>
+
+        <style>
+            td.water{
+                background-color: gray;
+            }
+            td.boat{
+                background-color: gray;
+            }
+        </style>
+                            
+        <script>
+            var count = 0;
+            function fire (hitOrMiss, square) {
+                //var deDom = document.getElementsByTagName("html");
+                //console.log(deDom);
+                
+                console.log(hitOrMiss);
+                if(square.style.backgroundColor == 'blue' | square.style.backgroundColor == 'red') {
+                    alert("Select different square");
+                } else {
+                    if(hitOrMiss == 'water'){
+                    square.style.backgroundColor = 'blue';
+                    alert("Plons")
+                    } else {if(count==0) {
+                        alert("Raak!")
+                        square.style.backgroundColor = 'red';
+                        count++;
+                    } else {alert("Gezonken!")}
+                        square.style.backgroundColor = 'red';
+                        } 
+                    }               
+                }
+            
+        </script>
+
+    </head>
+    <body>
+        Welcome to Battleships!
+        <table border=1 >
+            <tr>
+                <td class=water onclick="fire('water', this)" > ~~~~ </td>
+                <td class=boat onclick="fire('boat', this)" > ~~~~ </td>
+                <td class=boat onclick="fire('boat', this)" > ~~~~ </td>
+                <td class=water onclick="fire('water', this)" > ~~~~ </td>
+            </tr>
+        </table>
+    </body>
+    
+
+    
+</html>
