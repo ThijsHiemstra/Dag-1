@@ -1,25 +1,51 @@
 <script>
 	function RekenMachine(){
-	var getal1 = document.getElementById("firstNumber").value;
-	var getal2 = document.getElementById("secondNumber").value;
-	document.getElementById("outcome").innerHTML = getal1 * getal2;
-		}
+		
+		var stringGetal1 = document.getElementById("firstNumber").value;
+		var stringGetal2 = document.getElementById("secondNumber").value;
+		var calcFunction = document.getElementById("calcType").value;
 
+		getal1=parseInt(stringGetal1);
+		getal2=parseInt(stringGetal2);
+
+		//addition
+		if (calcFunction == "+" ){
+		console.log(
+			document.getElementById("outcome").innerHTML = getal1 + getal2);	
+		//substraction
+		} else if (calcFunction == "-"){
+		console.log(
+			document.getElementById("outcome").innerHTML = getal1 - getal2);
+		//multiplication
+		} else if (calcFunction == "*"){
+			console.log(
+				document.getElementById("outcome").innerHTML = getal1 * getal2);
+		//division
+		} else if (calcFunction == "/" & getal2 !=0){ 
+			console.log(
+				document.getElementById("outcome").innerHTML = getal1 / getal2);		
+		} else if (calcfunction == "/" & getal2 == 0){
+			console.log(
+				document.getElementById("outcome").innerHTML = "Can't divide by zero")
+		//wrong input	
+		}else {console.log(
+			document.getElementById("outcome").innerHTML = "Wrong Operator");
+		}
+	}
+		
 </script>
 
-
-<h1 allign="center" id=title> 
+<h1  align="center" id=title> 
 	Calculator 
 	</h1>
 
 <input type="text" cols="40" row="100" id="firstNumber"> 
+<input type="text" cols="40" row="40" id="calcType">
 <input type="text" cols="40" row="100" id="secondNumber">
 
-<h2 allign="left" onclick="RekenMachine()"  id=outcome>
-	Click for multiplication
-	</h2>
-	
-
-	
+<h4 align="left" onclick="RekenMachine()" id=outcome>
+	Click for answer
+	</h4>
+		
 
 
