@@ -7,22 +7,52 @@
 <body>
     <script>
         var countTurn=0;
-
         function StoneIn (square) {
             console.log(square)
             if(square.style.backgroundColor == 'red' | square.style.backgroundColor == 'yellow') {
                 alert("select different position")
-            } else if(countTurn % 2 == 0){
-                square.style.backgroundColor = "red";
-                countTurn++; 
+            } else if(countTurn % 2 == 1){
+				switch (square.name){
+				case square.name=50:
+				if(square.style.backgroundColor == 'red' | square.style.backgroundColor == 'yellow')
+				{square.style.backgroundColor = "red"
+				countTurn++;
+				console.log(square)
+				break;}
+				case square.name=40:
+				if(square.style.backgroundColor == 'red' | square.style.backgroundColor == 'yellow')
+				{square.style.backgroundColor = "red"
+				countTurn++;
+				break;}
+				case square.name=30:
+				if(square.style.backgroundColor == 'red' | square.style.backgroundColor == 'yellow')
+				{square.style.backgroundColor = "red"
+				countTurn++;
+				break;}
+				case square.name=20:
+				if(square.style.backgroundColor == 'red' | square.style.backgroundColor == 'yellow')
+				{square.style.backgroundColor = "red"
+				countTurn++;
+				break;}
+				case square.name=10:
+				if(square.style.backgroundColor == 'red' | square.style.backgroundColor == 'yellow')
+				{square.style.backgroundColor = "red"
+				countTurn++;
+				break;}
+				case square.name=00:
+				if(square.style.backgroundColor == 'red' | square.style.backgroundColor == 'yellow')
+				{square.style.backgroundColor = "red"
+				countTurn++;
+				break;
+				}}			
             } else {
                 square.style.backgroundColor = "yellow";
                 countTurn++; 
                 }
-        }        
-
-
-
+        }
+		
+		
+		
     </script>     
         
     <style>  
@@ -40,7 +70,6 @@
         padding: 10px;
         position: relative;
         }
-
     td:hover::after,
     .ff-fix:hover::after { 
         background-color: rgb(85, 231, 85);
@@ -53,83 +82,64 @@
         z-index: -1;        
         } 
 
-        .row1:hover{
-            background-color: rgb(85, 231, 85);
-            }
-        .row2:hover{
-            background-color: rgb(85, 231, 85);
-            }
-        .row3:hover{
-            background-color: rgb(85, 231, 85);
-            }
-        .row4:hover{
-            background-color: rgb(85, 231, 85);
-            }
-        .row5:hover{
-            background-color: rgb(85, 231, 85);
-            }
-        .row6:hover{
-            background-color: rgb(85, 231, 85);
-            }
-
     </style>
     Let's play connect four!
     Click on a square to start
         
     <table class=board>
-        <tr class=row0>
-            <td class='square column0' onclick="StoneIn(this), CheckColumn(this)"> </td>
-            <td class='square column1' onclick="StoneIn(this), CheckColumn(this)"> </td>
-            <td class='square column2' onclick="StoneIn(this), CheckColumn(this)"> </td>
-            <td class='square column3' onclick="StoneIn(this), CheckColumn(this)"> </td>
-            <td class='square column4' onclick="StoneIn(this), CheckColumn(this)"> </td>
-            <td class='square column5' onclick="StoneIn(this), CheckColumn(this)"> </td>
-            <td class='square column6' onclick="StoneIn(this), CheckColumn(this)"> </td>
+        <tr class=row0 data-row='0'>
+            <td class='square name='00' onclick="StoneIn(this)"> </td>
+            <td class='square name='01' onclick="StoneIn(this)"> </td>
+            <td class='square name='02' onclick="StoneIn(this)"> </td>
+            <td class='square name='03' onclick="StoneIn(this)"> </td>
+            <td class='square name='04' onclick="StoneIn(this)"> </td>
+            <td class='square name='05' onclick="StoneIn(this)"> </td>
+            <td class='square name='06' onclick="StoneIn(this)"> </td>
         </tr>
-       <tr class=row1>
-            <td class='square column0' onclick="StoneIn(this)"> </td>
-            <td class='square column1' onclick="StoneIn(this)"> </td>
-            <td class='square column2' onclick="StoneIn(this)"> </td>
-            <td class='square column3' onclick="StoneIn(this)"> </td>
-            <td class='square column4' onclick="StoneIn(this)"> </td>
-            <td class='square column5' onclick="StoneIn(this)"> </td>
-            <td class='square column6' onclick="StoneIn(this)"> </td>
+        <tr class=row1 data-row='1'>
+            <td class='square name='10' onclick="StoneIn(this)"> </td>
+            <td class='square name='11' onclick="StoneIn(this)"> </td>
+            <td class='square name='12' onclick="StoneIn(this)"> </td>
+            <td class='square name='13' onclick="StoneIn(this)"> </td>
+            <td class='square name='14' onclick="StoneIn(this)"> </td>
+            <td class='square name='15' onclick="StoneIn(this)"> </td>
+            <td class='square name='16' onclick="StoneIn(this)"> </td>
         </tr>
-        <tr class=row2>
-            <td class='square column0' onclick="StoneIn(this)"> </td>
-            <td class='square column1' onclick="StoneIn(this)"> </td>
-            <td class='square column2' onclick="StoneIn(this)"> </td>
-            <td class='square column3' onclick="StoneIn(this)"> </td>
-            <td class='square column4' onclick="StoneIn(this)"> </td>
-            <td class='square column5' onclick="StoneIn(this)"> </td>
-            <td class='square column6' onclick="StoneIn(this)"> </td>
+        <tr class=row2 data-row='2'>
+            <td class='square name='20' onclick="StoneIn(this)"> </td>
+            <td class='square name='21' onclick="StoneIn(this)"> </td>
+            <td class='square name='22' onclick="StoneIn(this)"> </td>
+            <td class='square name='23' onclick="StoneIn(this)"> </td>
+            <td class='square name='24' onclick="StoneIn(this)"> </td>
+            <td class='square name='25' onclick="StoneIn(this)"> </td>
+            <td class='square name='26' onclick="StoneIn(this)"> </td>
         </tr>
-        <tr class=row3>
-            <td class='square column0' onclick="StoneIn(this)"> </td>
-            <td class='square column1' onclick="StoneIn(this)"> </td>
-            <td class='square column2' onclick="StoneIn(this)"> </td>
-            <td class='square column3' onclick="StoneIn(this)"> </td>
-            <td class='square column4' onclick="StoneIn(this)"> </td>
-            <td class='square column5' onclick="StoneIn(this)"> </td>
-            <td class='square column6' onclick="StoneIn(this)"> </td>
+        <tr class=row3 data-row='3'>
+            <td class='square name='30' onclick="StoneIn(this)"> </td>
+            <td class='square name='31' onclick="StoneIn(this)"> </td>
+            <td class='square name='32' onclick="StoneIn(this)"> </td>
+            <td class='square name='33' onclick="StoneIn(this)"> </td>
+            <td class='square name='34' onclick="StoneIn(this)"> </td>
+            <td class='square name='35' onclick="StoneIn(this)"> </td>
+            <td class='square name='36' onclick="StoneIn(this)"> </td>
         </tr>
-        <tr class=row4>
-            <td class='square column0' onclick="StoneIn(this)"> </td>
-            <td class='square column1' onclick="StoneIn(this)"> </td>
-            <td class='square column2' onclick="StoneIn(this)"> </td>
-            <td class='square column3' onclick="StoneIn(this)"> </td>
-            <td class='square column4' onclick="StoneIn(this)"> </td>
-            <td class='square column5' onclick="StoneIn(this)"> </td>
-            <td class='square column6' onclick="StoneIn(this)"> </td>
+        <tr class=row4 data-row='4'>
+            <td class='square name='40' onclick="StoneIn(this)"> </td>
+            <td class='square name='41' onclick="StoneIn(this)"> </td>
+            <td class='square name='42' onclick="StoneIn(this)"> </td>
+            <td class='square name='43' onclick="StoneIn(this)"> </td>
+            <td class='square name='44' onclick="StoneIn(this)"> </td>
+            <td class='square name='45' onclick="StoneIn(this)"> </td>
+            <td class='square name='46' onclick="StoneIn(this)"> </td>
         </tr>
-        <tr class=row5>
-            <td class='square column0' onclick="StoneIn(this)"> </td>
-            <td class='square column1' onclick="StoneIn(this)"> </td>
-            <td class='square column2' onclick="StoneIn(this)"> </td>
-            <td class='square column3' onclick="StoneIn(this)"> </td>
-            <td class='square column4' onclick="StoneIn(this)"> </td>
-            <td class='square column5' onclick="StoneIn(this)"> </td>
-            <td class='square column6' onclick="StoneIn(this)"> </td>
+        <tr class=row5 data-row='5'>
+            <td class='square name='50' onclick="StoneIn(this)"> </td>
+            <td class='square name='51' onclick="StoneIn(this)"> </td>
+            <td class='square name='52' onclick="StoneIn(this)"> </td>
+            <td class='square name='53' onclick="StoneIn(this)"> </td>
+            <td class='square name='54' onclick="StoneIn(this)"> </td>
+            <td class='square name='55' onclick="StoneIn(this)"> </td>
+            <td class='square name='56' onclick="StoneIn(this)"> </td>
         </tr>
     </table>     
 </body>
